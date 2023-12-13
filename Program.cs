@@ -62,8 +62,7 @@ namespace StarCitizenTranslator
                         string translatedText = await TranslationHelper.TranslateText(rightPart);
                         Console.WriteLine($" -> {translatedText}");
                         await writer.WriteLineAsync($"{leftPart}={translatedText}");
-                    }
-                    catch (Exception ex)
+                    } catch(Exception ex)
                     {
                         Console.WriteLine($"Error translating line {currentLine}: {ex.Message}");
                         break;
@@ -73,7 +72,5 @@ namespace StarCitizenTranslator
             Console.WriteLine("Done!");
             Console.ReadLine();
         }
-
-        
     }
 }

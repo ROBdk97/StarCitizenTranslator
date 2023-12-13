@@ -27,8 +27,6 @@ namespace StarCitizenTranslator
 
             string jsonContent = JsonSerializer.Serialize(requestContent);
             StringContent content = new(jsonContent, Encoding.UTF8, "application/json");
-            // read api key from configuration
-
 
             client.DefaultRequestHeaders.Add("Authorization", $"DeepL-Auth-Key {DEEPL_API_KEY}");
 
